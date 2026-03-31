@@ -1,4 +1,4 @@
-Para organizar a parte do projeto referente a criação do modelo de machine learning, foi utilizado o 
+    Para organizar a parte do projeto referente a criação do modelo de machine learning, foi utilizado o 
 “Checklist de Projeto de Aprendizado de Máquina”, presente no livro “Mãos à Obra: Aprendizado de Máquina com Scikit-Learn, Keras & TensorFlow”, 
 de Aurélien Géron. Ele explicita o passo a passo para a construção de projetos de aprendizado de máquina de forma clara e eficiente, 
 facilitando a organização e estruturação da máquina a ser montada;
@@ -16,28 +16,31 @@ facilitando a organização e estruturação da máquina a ser montada;
 
     1) ABORDAR O PROBLEMA E ANALISAR O PANORAMA GERAL
 
-O objetivo do NeuroPredict é ser uma ferramenta simples, intuitiva e de fácil acesso aos médicos que realize uma 
+    O objetivo do NeuroPredict é ser uma ferramenta simples, intuitiva e de fácil acesso aos médicos que realize uma 
 análise preditiva de risco de desenvolvimento de demências pelo paciente analisado, de forma que os resultados sejam 
 interpretáveis. Para isso, a solução encontrada é desenvolver um modelo preditivo explicável, o qual receberá os dados do 
 paciente e será capaz de dizer quais as chances do desenvolvimento da demência (probabilidade estimada do surgimento da doença) 
 e de informar quais variáveis mais influenciaram essa decisão. O médico, então, utilizará isso como base para prosseguir com 
 recomendações e tratamentos.
 
-O problema será abordado por meio do aprendizado supervisionado de classificação com saída probabilística. O desempenho será 
+    O problema será abordado por meio do aprendizado supervisionado de classificação com saída probabilística. O desempenho será 
 medido primordialmente através do Recall (Sensibilidade) e do F1-Score. A escolha do Recall justifica-se pela natureza clínica 
 do projeto, onde minimizar os Falsos Negativos é crucial para garantir que pacientes em risco recebam atenção precoce. 
 Complementarmente, o F1-Score será utilizado para assegurar um equilíbrio com a Precisão, evitando diagnósticos falso-positivos 
 excessivos. Também será utilizada a métrica AUC-ROC para avaliar a capacidade discriminatória do modelo entre as classes ao longo de 
 diferentes níveis de probabilidade.
 
-Para que o NeuroPredict seja considerado viável, estabelecemos os seguintes critérios mínimos de desempenho (Baseline), 
+    Para que o NeuroPredict seja considerado viável, estabelecemos os seguintes critérios mínimos de desempenho (Baseline), 
 baseados em padrões da literatura médica e em testes de triagem cognitiva (como o MMSE):
 - Revocação (Recall) Mínima: 87% (Garantindo que a grande maioria dos pacientes em risco seja identificada para investigação profunda).
 - AUC-ROC Mínima: 0.85 (Assegurando que o modelo possua uma alta capacidade de distinção diagnóstica entre as classes).
 - Precisão Mínima: 75% (Estabelecida para evitar um volume excessivo de falsos alarmes que gerariam custos e ansiedade desnecessários).
 
-O sucesso do projeto será atingido se o modelo final superar esses patamares nos dados de teste, aproximando-se do desempenho de 
+    O sucesso do projeto será atingido se o modelo final superar esses patamares nos dados de teste, aproximando-se do desempenho de 
 especialistas humanos assistidos por exames de imagem.
 
     2) OBTER OS DADOS
 
+    Foi selecionado o dataset oasis_logitudinal.csv da página "https://www.kaggle.com/datasets/jboysen/mri-and-alzheimers?resource=download",
+que foi salvo em "data/raw" no projeto. Depois disso, no arquivo "02_exploracao.ipynb", o csv do dataset foi lido, para que pudesse ser 
+manipulado.
