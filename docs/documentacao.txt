@@ -44,3 +44,8 @@ especialistas humanos assistidos por exames de imagem.
     Foi selecionado o dataset oasis_logitudinal.csv da página "https://www.kaggle.com/datasets/jboysen/mri-and-alzheimers?resource=download",
 que foi salvo em "data/raw" no projeto. Depois disso, no arquivo "02_exploracao.ipynb", o csv do dataset foi lido, para que pudesse ser 
 manipulado.
+
+    Foi verificado que há variáveis categóricas (dentre elas, a variável target) e dados numéricos na tabela, há também dados nulos e a quantidade
+total de inserções é de 373. 
+
+    Visualizando os histogramas das variáveis numéricas do csv, foi percebida grande diferença na escala dos atributos.
