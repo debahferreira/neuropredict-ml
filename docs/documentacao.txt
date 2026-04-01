@@ -49,3 +49,8 @@ manipulado.
 total de inserções é de 373. 
 
     Visualizando os histogramas das variáveis numéricas do csv, foi percebida grande diferença na escala dos atributos.
+
+    Para dividir os dados em dados de treinamento e de teste, foi identificada a necessidade de adicionar uma coluna temporária na tabela, referente
+à coluna "Group". Para garantir uma divisão em que os conjuntos de teste e treinamento possuam a proporção da variável "Group" balanceada
+(aproximadamente metade das inserções com "demented" e a outra metade com "nondemented" para cada grupo), foi criada então uma nova coluna equivalente
+a "Group", com "demented" assumindo o valor numérico 1 e "nondemented" assumindo o valor 0.
